@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "claude-managed-agents-control-plane",
+  "preview_urls": false,
   "main": "src/index.ts",
   "compatibility_date": "2026-05-18",
   "compatibility_flags": ["nodejs_compat"],
