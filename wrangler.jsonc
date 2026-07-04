@@ -59,11 +59,11 @@
   "kv_namespaces": [
     {
       "binding": "SECRETS",
-      "id": "36d8189b626e417d985f3887906f089a",
+      "id": "09f722bd99514ce2a11c17772d45dc9a",
     },
     {
       "binding": "EGRESS_POLICIES",
-      "id": "65f3f44ccbca4f08bc87f02055ae29b1",
+      "id": "e92f76e49428474f83c4af1eee6ad11b",
     },
   ],
   // D1: webhook events + session metadata. `database_id` is patched on
@@ -73,7 +73,7 @@
     {
       "binding": "DB",
       "database_name": "claude-managed-agents-db",
-      "database_id": "1f0a864c-282d-4108-abcc-9f2703d68448",
+      "database_id": "9c8f81f9-5e07-4798-872e-d438c2623445",
       "migrations_dir": "./migrations",
     },
   ],
