@@ -73,9 +73,9 @@ type NavItem = { id: NavId; label: string; icon: typeof ShieldCheck };
 type NavGroup = {
   label: string;
   items: NavItem[];
-  // Collapsible groups render with `Sidebar.GroupLabel` as the trigger
-  // and `Sidebar.GroupContent` wrapping the menu — required for the
-  // chevron + animated expand/collapse Kumo provides out of the box.
+  // Collapsible groups wrap the menu in `Sidebar.Collapsible` with the
+  // `Sidebar.GroupLabel` as the `CollapsibleTrigger` — the chevron +
+  // animated expand/collapse Kumo provides out of the box.
   collapsible?: boolean;
   defaultOpen?: boolean;
 };
@@ -341,9 +341,13 @@ function NavGroupSection({
   }
 
   return (
-    <Sidebar.Group collapsible open={open} onOpenChange={setUserOpen}>
-      <Sidebar.GroupLabel>{group.label}</Sidebar.GroupLabel>
-      <Sidebar.GroupContent>{menu}</Sidebar.GroupContent>
+    <Sidebar.Group>
+      <Sidebar.Collapsible open={open} onOpenChange={setUserOpen}>
+        <Sidebar.CollapsibleTrigger
+          render={<Sidebar.GroupLabel>{group.label}</Sidebar.GroupLabel>}
+        />
+        <Sidebar.CollapsibleContent>{menu}</Sidebar.CollapsibleContent>
+      </Sidebar.Collapsible>
     </Sidebar.Group>
   );
 }
